@@ -4,7 +4,7 @@ import { CounterService } from '../../services/counter.service';
 @Component({
   selector: 'app-config-view',
   templateUrl: './config-view.component.html',
-  styleUrls: ['./config-view.component.scss'],
+  styleUrls: ['./config-view.component.scss', '../../../styles/skeleton.scss'],
 })
 export class ConfigViewComponent implements OnInit {
   config = {};

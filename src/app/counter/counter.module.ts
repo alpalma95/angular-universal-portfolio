@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import { CounterAppComponent } from './counter.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { CounterControllersComponent } from './components/counter-controllers/counter-controllers.component';
 import { SetupComponent } from './components/counter-controllers/setup/setup.component';
@@ -12,7 +12,7 @@ import { ConfigViewComponent } from './components/config-view/config-view.compon
 
 @NgModule({
   declarations: [
-    AppComponent,
+    CounterAppComponent,
     CounterComponent,
     CounterControllersComponent,
     SetupComponent,
@@ -22,6 +22,6 @@ import { ConfigViewComponent } from './components/config-view/config-view.compon
   ],
   imports: [BrowserModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [CounterAppComponent],
 })
-export class AppModule {}
+export class CounterModule {}

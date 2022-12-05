@@ -7,6 +7,9 @@ import { LandingPageModule } from './landing-page/landing-page.module';
 import { SharedModule } from './shared/shared.module';
 import { DisplayHideModule } from './display-hide/display-hide.module';
 import { RouterModule } from '@angular/router';
+import { CommunicationModule } from './communication/communication.module';
+import { CrudModule } from './crud/crud.module';
+import { CounterModule } from './counter/counter.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +20,9 @@ import { RouterModule } from '@angular/router';
     SharedModule,
     DisplayHideModule,
     RouterModule,
+    CommunicationModule,
+    CrudModule,
+    CounterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

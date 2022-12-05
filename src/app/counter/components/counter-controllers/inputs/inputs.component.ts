@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { debounceTime, Subject } from 'rxjs';
-import { CounterService } from 'src/app/services/counter.service';
+import { CounterService } from 'src/app/counter/services/counter.service';
 import { Inputs } from '../../../interfaces/inputs.interface';
 
 @Component({
   selector: 'app-inputs',
   templateUrl: './inputs.component.html',
-  styleUrls: ['./inputs.component.scss'],
+  styleUrls: ['./inputs.component.scss', '../../../../styles/skeleton.scss'],
 })
 export class InputsComponent implements OnInit {
   debouncer: Subject<Inputs> = new Subject<Inputs>();

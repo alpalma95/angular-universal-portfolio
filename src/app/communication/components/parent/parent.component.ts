@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MyServiceService } from 'src/app/services/my-service.service';
-import { ObservablesService } from 'src/app/services/observables.service';
+import { MyServiceService } from '../../services/my-service.service';
+import { ObservablesService } from '../../services/observables.service';
 
 @Component({
   selector: 'app-parent',
@@ -23,7 +23,7 @@ export class ParentComponent implements OnInit {
 
   ngOnInit(): void {
     this.obs.messageFromChild.subscribe(
-      (value) => (this.messageChildObservable = value)
+      (value: any) => (this.messageChildObservable = value)
     );
   }
 

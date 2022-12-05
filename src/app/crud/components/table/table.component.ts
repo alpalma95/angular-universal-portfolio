@@ -5,7 +5,7 @@ import { User } from '../../interfaces/user.interface';
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
-  styleUrls: ['./table.component.scss'],
+  styleUrls: ['./table.component.scss', '../../../styles/skeleton.scss'],
 })
 export class TableComponent implements OnInit {
   users: User[] = [];

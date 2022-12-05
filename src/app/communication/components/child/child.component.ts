@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ObservablesService } from 'src/app/services/observables.service';
 import { MyServiceService } from '../../services/my-service.service';
+import { ObservablesService } from '../../services/observables.service';
 
 @Component({
   selector: 'app-child',
@@ -25,7 +25,7 @@ export class ChildComponent implements OnInit {
 
   ngOnInit(): void {
     this.obs.messageFromParent.subscribe(
-      (value) => (this.messageParentObservable = value)
+      (value: any) => (this.messageParentObservable = value)
     );
   }
 

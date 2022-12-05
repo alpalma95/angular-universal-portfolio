@@ -4,7 +4,7 @@ import { CounterService } from '../../../services/counter.service';
 @Component({
   selector: 'app-setup',
   templateUrl: './setup.component.html',
-  styleUrls: ['./setup.component.scss'],
+  styleUrls: ['./setup.component.scss', '../../../../styles/skeleton.scss'],
 })
 export class SetupComponent {
   constructor(private cs: CounterService) {}

@@ -14,7 +14,5 @@ export class ProjectsComponent implements OnInit {
     return this.ps.projectsInformation;
   }
 
-  ngOnInit(): void {
-    console.log(this.projectsInformation);
-  }
+  ngOnInit(): void {}
 }

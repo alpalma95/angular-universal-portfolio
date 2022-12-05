@@ -5,15 +5,16 @@ import {
   FormBuilder,
   Validators,
 } from '@angular/forms';
-import { User } from 'src/app/interfaces/user.interface';
-import { Operation } from 'src/app/types/operation';
+import { User } from '../../interfaces/user.interface';
+
 import { UserService } from '../../services/user.service';
+import { Operation } from '../../types/operation';
 import { PasswordMatch } from '../../validators/password.validator';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss'],
+  styleUrls: ['./form.component.scss', '../../../styles/skeleton.scss'],
 })
 export class FormComponent implements OnInit, DoCheck {
   countryOptions: string[] = ['Ireland', 'Australia', 'Spain', 'Guatemala'];

@@ -16,19 +16,19 @@ export class ProjectsService {
       title: 'Communication',
       codeLink:
         'https://github.com/alpalma-BOSONIT/02-angular-component-communication',
-      route: '',
+      route: 'communication',
       image: 'url(../../../assets/02_Communication.png)',
     },
     {
       title: 'CRUD operations',
       codeLink: 'https://github.com/alpalma-BOSONIT/03-angular-CRUD',
-      route: '',
+      route: 'crud',
       image: 'url(../../../assets/03_CRUD.png)',
     },
     {
       title: 'Counter with RxJs',
       codeLink: 'https://github.com/alpalma-BOSONIT/04_counter_rxjs',
-      route: '',
+      route: 'counter',
       image: 'url(../../../assets/04_Counter.png)',
     },
   ];

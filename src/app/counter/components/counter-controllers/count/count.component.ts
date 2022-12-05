@@ -4,7 +4,7 @@ import { CounterService } from '../../../services/counter.service';
 @Component({
   selector: 'app-count',
   templateUrl: './count.component.html',
-  styleUrls: ['./count.component.scss'],
+  styleUrls: ['./count.component.scss', '../../../../styles/skeleton.scss'],
 })
 export class CountComponent {
   constructor(private cs: CounterService) {}
