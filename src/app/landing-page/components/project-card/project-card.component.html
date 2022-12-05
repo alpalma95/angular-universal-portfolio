@@ -1,0 +1,21 @@
+<div class="card">
+  <div
+    role="img"
+    aria-label="project preview"
+    class="card__img"
+    [ngStyle]="{ 'background-image': projectProps.image }"
+  ></div>
+  <div class="card__description">
+    <h2 class="project-title">{{ projectProps.title }}</h2>
+    <ul>
+      <li>
+        <a [routerLink]="projectProps.route" class="link--white">Demo &rarr;</a>
+      </li>
+      <li>
+        <a [href]="projectProps.codeLink" class="link--white" target="_blank"
+          >Code &rarr;</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>

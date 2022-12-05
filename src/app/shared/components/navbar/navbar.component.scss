@@ -1,0 +1,23 @@
+@use "../../../styles/variables.scss" as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  z-index: 2;
+  mix-blend-mode: difference;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 2rem;
+  justify-content: end;
+  font-weight: 700;
+  font-family: $font-titles;
+  font-size: $font-small;
+  color: $bg;
+  z-index: 2;
+}

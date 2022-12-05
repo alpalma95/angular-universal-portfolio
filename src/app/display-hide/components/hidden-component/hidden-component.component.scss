@@ -1,0 +1,9 @@
+.surprise {
+    width: min(90%, 20rem);
+    margin: 5rem auto;
+    text-align: center;
+
+    &__icon {
+        font-size: 5rem;
+    }
+}

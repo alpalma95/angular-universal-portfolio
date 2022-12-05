@@ -1,0 +1,16 @@
+<section class="container child">
+  <div class="row">
+    <h1>Child</h1>
+    <h2>
+      Message:
+      {{
+        childMessage || messageFromParent || messageParentObservable | uppercase
+      }}
+    </h2>
+  </div>
+  <div class="row child__buttons">
+    <button (click)="setParentMessageService()">Use Service</button
+    ><button (click)="sendMessageOutput()">Use Output</button
+    ><button (click)="setMessageObservable()">Use Observable</button>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+@use "./variables.scss" as *;
+
+.container {
+  width: min(90%, 60rem);
+  // width: min(number(90%), number(60rem));
+
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.container-child {
+  padding-top: 5rem;
+}
+
+.link--white,
+.link--red {
+  font-family: $font-titles;
+  font-size: $font-small;
+  text-decoration: underline dashed;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.link--white {
+  color: $bg;
+}
+
+.link--white:hover {
+  color: $primary;
+  background-color: $bg;
+  text-decoration: none;
+}
+
+.link--red {
+  color: $primary;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.d-inline-block {
+  display: inline-block;
+}

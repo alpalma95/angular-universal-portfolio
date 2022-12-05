@@ -1,0 +1,76 @@
+@use "../../../styles/variables.scss" as *;
+
+#contact {
+  min-height: 90vh;
+  background-image: $gradient-hard;
+  padding: 4rem 0;
+}
+
+.contact__h1 {
+  font-family: $font-titles;
+  font-size: $font-big;
+  color: $bg;
+}
+
+.contact__h2 {
+  font-family: $font-titles;
+  font-size: $font-medium;
+  color: $bg;
+}
+
+.contact__links,
+.contact__form {
+  width: 100%;
+  font-size: $font-small;
+  font-family: $font-body;
+  padding-bottom: 1rem;
+}
+
+.contact__links > ul {
+  width: fit-content;
+
+  li {
+    i {
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.contact__form > form {
+  width: min(100%, 40rem);
+  margin: 0 auto;
+}
+.contact__form > form > * {
+  display: block;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.contact__form > form > label {
+  color: $bg;
+  font-size: $font-small;
+}
+
+.contact__form > form > input,
+.contact__form > form > textarea,
+.contact__form > form > button {
+  color: $primary;
+  font-size: $font-small;
+  border-radius: 10px;
+  padding: 0.3rem 1rem;
+  border: 0;
+  transition: all 0.2s;
+}
+
+.contact__form > form > button:hover {
+  transform: translateY(-3px);
+  cursor: pointer;
+  box-shadow: 0px 3px 10px 2px rgb(161, 96, 96);
+}
+
+@media (min-width: 699px) {
+  .contact__flex {
+    display: flex;
+  }
+}

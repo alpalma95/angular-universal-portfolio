@@ -1,0 +1,35 @@
+@use "../../../styles/variables.scss" as *;
+
+#welcome-section {
+  height: 100vh;
+  background-image: $gradient,
+    url("../../../../assets/cup-of-coffee-gc3fa0fe5c_1920.jpg");
+  background-size: cover;
+  padding-top: 8rem;
+  text-align: center;
+
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.welcome-section__h1 {
+  font-size: $font-big;
+  font-family: $font-titles;
+  color: $bg;
+}
+
+.welcome-section__p {
+  font-size: $font-medium;
+  font-family: $font-body;
+  color: $bg;
+}
+
+@media (min-width: 480px) {
+  #welcome-section {
+    display: grid;
+    place-content: center;
+    padding: 0;
+  }
+  .welcome-section__h1 {
+    font-size: $font-xl;
+  }
+}

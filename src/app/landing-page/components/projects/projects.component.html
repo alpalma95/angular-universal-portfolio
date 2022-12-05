@@ -1,0 +1,11 @@
+<main id="projects">
+  <div class="container">
+    <h1 class="projects__h1">Projects</h1>
+    <div class="projects__cards-section">
+      <app-project-card
+        *ngFor="let project of projectsInformation"
+        [projectProps]="project"
+      ></app-project-card>
+    </div>
+  </div>
+</main>

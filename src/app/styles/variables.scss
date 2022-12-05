@@ -1,0 +1,25 @@
+$primary: rgb(221, 42, 14);
+$secondary: rgb(245, 108, 58);
+$bg: rgb(255, 238, 238);
+$font-titles: "Barlow Condensed", sans-serif;
+$font-body: "Raleway", sans-serif;
+$font-big: 2.5rem;
+$font-xl: 3.5rem;
+$font-medium: 1.75rem;
+$font-small: 1.25rem;
+$small-screen: 480px;
+$gradient: linear-gradient(
+  to bottom right,
+  rgba(221, 42, 14, 0.8),
+  rgba(245, 108, 58, 0.8)
+);
+$gradient-soft: linear-gradient(
+  to bottom right,
+  rgba(221, 42, 14, 0.5),
+  rgba(245, 108, 58, 0.5)
+);
+$gradient-hard: linear-gradient(
+  to bottom right,
+  rgba(221, 42, 14, 1),
+  rgba(245, 108, 58, 1)
+);
