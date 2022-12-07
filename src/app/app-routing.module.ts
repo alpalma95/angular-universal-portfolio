@@ -10,22 +10,27 @@ const routes: Routes = [
   {
     path: '',
     component: LandingPageComponent,
+    data: { animation: 'home' },
   },
   {
     path: 'display-hide',
     component: DisplayHide,
+    data: { animation: 'project' },
   },
   {
     path: 'communication',
     component: CommunicationComponent,
+    data: { animation: 'project' },
   },
   {
     path: 'crud',
     component: CrudComponent,
+    data: { animation: 'project' },
   },
   {
     path: 'counter',
     component: CounterAppComponent,
+    data: { animation: 'project' },
   },
 ];
 
