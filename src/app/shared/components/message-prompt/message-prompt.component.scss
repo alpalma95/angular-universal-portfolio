@@ -1,0 +1,62 @@
+@use "../../../styles/variables.scss" as *;
+
+.message-prompt {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  z-index: 3;
+  width: min(90%, 35rem);
+  height: 50%;
+  padding: 4rem;
+  border-radius: 5px;
+  transform: translateX(-50%);
+  display: grid;
+  place-content: center;
+
+  &-error {
+    border: 2px solid red;
+    background-color: rgba(233, 54, 54, 0.863);
+
+    button {
+      color: $bg;
+      background-color: transparent;
+      border: 2px solid $bg;
+    }
+  }
+
+  &-success {
+    border: 2px solid rgb(0, 255, 13);
+    background-color: rgba(0, 255, 13, 0.863);
+
+    p {
+      font-size: 1.7rem;
+      color: rgb(1, 83, 1);
+      text-align: center;
+      font-weight: 700;
+    }
+
+    button {
+      color: $bg;
+      background-color: rgb(3, 146, 3);
+      border: 2px solid rgb(1, 83, 1);
+    }
+  }
+
+  ul {
+    font-size: 2rem;
+    line-height: 3rem;
+    color: $bg;
+  }
+  button {
+    display: block;
+    margin-top: 2rem;
+    padding: 1rem 0.5rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  // @media (max-width: 870px) {
+  //   width: 90%;
+  // }
+}

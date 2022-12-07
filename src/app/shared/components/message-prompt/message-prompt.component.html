@@ -1,0 +1,16 @@
+<div
+  class="message-prompt"
+  [ngClass]="{
+    'message-prompt-error': isError,
+    'message-prompt-success': isSuccess
+  }"
+  *ngIf="showPrompt"
+>
+  <ul>
+    <li *ngFor="let message of messages">👉 {{ message }}</li>
+  </ul>
+  <p *ngIf="isSuccess">
+    Message sent successfully! I'll reach out to you ASAP 😊
+  </p>
+  <button (click)="closeMessagePrompt()">Dismiss</button>
+</div>

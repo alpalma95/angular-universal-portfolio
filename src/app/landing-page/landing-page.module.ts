@@ -6,6 +6,9 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,6 +18,12 @@ import { RouterModule } from '@angular/router';
     ContactFormComponent,
     ProjectCardComponent,
   ],
-  imports: [CommonModule, RouterModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    ReactiveFormsModule,
+    SharedModule,
+    HttpClientModule,
+  ],
 })
 export class LandingPageModule {}

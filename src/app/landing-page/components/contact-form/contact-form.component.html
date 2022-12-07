@@ -27,13 +27,14 @@
 
       <div class="contact__form">
         <h2 class="contact__h2">Send me an email</h2>
-        <form action="#">
+        <form action="#" [formGroup]="emailForm" (ngSubmit)="sendEmail()">
           <label for="emailName">Your name:</label>
           <input
             type="text"
             placeholder="Your name"
             id="emailName"
             name="emailName"
+            formControlName="name"
           />
           <label for="emailEmail">Your email:</label>
           <input
@@ -41,6 +42,7 @@
             placeholder="Your email"
             id="emailEmail"
             name="emailEmail"
+            formControlName="email"
           />
           <label for="emailBody">You tell me!</label>
           <textarea
@@ -48,6 +50,7 @@
             id="emailBody"
             cols="30"
             rows="10"
+            formControlName="text"
           ></textarea>
           <button type="submit">Send</button>
         </form>
