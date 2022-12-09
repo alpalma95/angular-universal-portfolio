@@ -6,13 +6,13 @@
   >
 
   <label for="password">Password</label>
-  <input type="text" id="password" formControlName="password" />
+  <input type="password" id="password" formControlName="password" />
   <span *ngIf="inputIsValid('password')" class="error"
     >Error! Password {{ renderError("password") }}</span
   >
 
   <label for="password-conf">Confirm your password</label>
-  <input type="text" id="password-conf" formControlName="passwordConfirm" />
+  <input type="password" id="password-conf" formControlName="passwordConfirm" />
   <span *ngIf="inputIsValid('passwordConfirm')" class="error"
     >Error! Password confirm {{ renderError("passwordConfirm") }}</span
   >

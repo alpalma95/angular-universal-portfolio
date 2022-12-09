@@ -10,11 +10,12 @@ import { RouterModule } from '@angular/router';
 import { CommunicationModule } from './communication/communication.module';
 import { CrudModule } from './crud/crud.module';
 import { CounterModule } from './counter/counter.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     AppRoutingModule,
     LandingPageModule,
@@ -24,6 +25,7 @@ import { CounterModule } from './counter/counter.module';
     CommunicationModule,
     CrudModule,
     CounterModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

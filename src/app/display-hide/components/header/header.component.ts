@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ApiService } from '../../../api/api.service';
 
 @Component({
   selector: 'app-header',
@@ -10,9 +11,11 @@ export class HeaderComponent implements OnInit {
     new EventEmitter<boolean>();
   @Input() isVisible?: boolean;
 
-  constructor() {}
+  constructor(private api: ApiService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.api.data.subscribe((data) => console.log(data));
+  }
 
   emitToggleVisibility(): void {
     this.toggleVisibility.emit(!this.isVisible);
