@@ -1,12 +1,13 @@
 .error {
   color: red;
-  margin-top: -1.5rem;
+  // margin-top: -1.5rem;
   margin-bottom: 1rem;
   display: block;
 }
 
 form {
-  input {
+  input,
+  select {
     margin-bottom: 0.5rem;
   }
 }
