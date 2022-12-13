@@ -36,6 +36,7 @@ const routes: Routes = [
     path: 'secret',
     loadChildren: () =>
       import('./secret/secret.module').then((m) => m.SecretModule),
+    data: { animation: 'project' },
   },
 ];
 

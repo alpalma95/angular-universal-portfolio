@@ -31,6 +31,13 @@ export class ProjectsService {
       route: 'counter',
       image: 'url(../../../assets/04_Counter.png)',
     },
+    {
+      title: 'User secret',
+      codeLink:
+        'https://github.com/alpalma-BOSONIT/angular-universal-portfolio/tree/main/src/app/secret',
+      route: 'secret/login',
+      image: '',
+    },
   ];
 
   get projectsInformation(): ProjectCard[] {
