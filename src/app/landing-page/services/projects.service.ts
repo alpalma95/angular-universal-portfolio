@@ -36,7 +36,7 @@ export class ProjectsService {
       codeLink:
         'https://github.com/alpalma-BOSONIT/angular-universal-portfolio/tree/main/src/app/secret',
       route: 'secret/login',
-      image: '',
+      image: 'url(../../../assets/05_Secret.png)',
     },
   ];
 
