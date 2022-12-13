@@ -32,10 +32,20 @@ const routes: Routes = [
     component: CounterAppComponent,
     data: { animation: 'project' },
   },
+  {
+    path: 'secret',
+    loadChildren: () =>
+      import('./secret/secret.module').then((m) => m.SecretModule),
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled', initialNavigation: 'enabledBlocking' })],
+  imports: [
+    RouterModule.forRoot(routes, {
+      anchorScrolling: 'enabled',
+      initialNavigation: 'enabledBlocking',
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

@@ -11,9 +11,10 @@ datasource db {
 }
 
 model User {
-  id       Int     @id @default(autoincrement())
-  email    String  @unique
-  password String
-  name     String?
-  secret   String?
+  id              Int     @id @default(autoincrement())
+  email           String  @unique
+  password        String
+  passwordConfirm String
+  name            String?
+  secret          String?
 }

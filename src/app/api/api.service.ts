@@ -1,4 +1,5 @@
 import { Injectable, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 import { HttpClient } from '@angular/common/http';
 
@@ -6,6 +7,6 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class ApiService {
-  data = this.http.get('http://localhost:4200/api/users');
+  data = this.http.get(`${environment.base_url}/api/users`);
   constructor(private http: HttpClient) {}
 }

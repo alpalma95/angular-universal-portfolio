@@ -30,7 +30,8 @@ export function app(): express.Express {
   server.set('views', distFolder);
 
   // CUSTOM ENDPOINTS --------------
-
+  server.use(express.json());
+  server.use(express.urlencoded({ extended: true }));
   server.use('/api/users', userRouter);
 
   // -------------------------------

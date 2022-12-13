@@ -11,6 +11,7 @@ import { CommunicationModule } from './communication/communication.module';
 import { CrudModule } from './crud/crud.module';
 import { CounterModule } from './counter/counter.module';
 import { HttpClientModule } from '@angular/common/http';
+import { SecretModule } from './secret/secret.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     CrudModule,
     CounterModule,
     HttpClientModule,
+    SecretModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
