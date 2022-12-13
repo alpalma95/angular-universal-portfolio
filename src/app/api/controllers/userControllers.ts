@@ -35,8 +35,15 @@ export const loginUser = async (req: any, res: any) => {
       email: req.body.email,
     },
   });
+  if (!user || !bcrypt.compareSync(req.body.password, user?.password))
+    res.status(404).json({
+      satus: 'error',
+      message: 'Invalid credentials',
+    });
 
   if (bcrypt.compareSync(req.body.password, user?.password)) {
-    res.status(200).json(user);
+    res
+      .status(200)
+      .json({ name: user?.name, email: user?.email, secret: user?.secret });
   }
 };

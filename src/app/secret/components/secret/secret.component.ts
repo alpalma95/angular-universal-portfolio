@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
+import { tap } from 'rxjs';
 
 @Component({
   selector: 'app-secret',
@@ -6,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./secret.component.scss', '../../../styles/skeleton.scss'],
 })
 export class SecretComponent implements OnInit {
-  constructor() {}
+  userSecret: string = '';
 
-  ngOnInit(): void {}
+  constructor(private authService: AuthService) {}
+
+  ngOnInit(): void {
+    this.authService.activeUser$
+      .pipe(tap((val) => console.log(val)))
+      .subscribe(({ secret }) => (this.userSecret = secret));
+  }
 }

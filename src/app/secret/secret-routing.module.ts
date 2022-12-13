@@ -4,6 +4,8 @@ import { SecretViewComponent } from './components/secret-view/secret-view.compon
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { SignupFormComponent } from './components/signup-form/signup-form.component';
 import { SecretComponent } from './components/secret/secret.component';
+import { AuthGuard } from './guards/auth.guard';
+import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [
   {
@@ -13,14 +15,17 @@ const routes: Routes = [
       {
         path: 'login',
         component: LoginFormComponent,
+        canActivate: [LoginGuard],
       },
       {
         path: 'signup',
         component: SignupFormComponent,
+        canActivate: [LoginGuard],
       },
       {
         path: 'secret',
         component: SecretComponent,
+        canActivate: [AuthGuard],
       },
     ],
   },
