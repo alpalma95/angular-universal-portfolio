@@ -13,8 +13,8 @@ export class SecretComponent implements OnInit {
   constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
-    this.authService.activeUser$
-      .pipe(tap((val) => console.log(val)))
-      .subscribe(({ secret }) => (this.userSecret = secret));
+    this.authService.activeUser$.subscribe(
+      ({ secret }) => (this.userSecret = secret)
+    );
   }
 }

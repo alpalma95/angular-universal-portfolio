@@ -28,9 +28,7 @@ export class EmailService {
   public isSuccess$ = this._isSuccess.asObservable();
   public showPrompt$ = this._showPrompt.asObservable();
 
-  constructor(private http: HttpClient) {
-    this._emailFormData.subscribe((val) => console.log(val));
-  }
+  constructor(private http: HttpClient) {}
 
   public setEmailFormData(data: EmailData): void {
     this._emailFormData.next(data);
