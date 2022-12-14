@@ -16,7 +16,7 @@ import { PasswordMatch } from '../../validators/password.validator';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss'],
 })
-export class FormComponent implements OnInit, DoCheck {
+export class FormComponent implements OnInit {
   countryOptions: string[] = ['Ireland', 'Australia', 'Spain', 'Guatemala'];
   users: User[] = [];
   userToUpdate: User = {
@@ -53,21 +53,6 @@ export class FormComponent implements OnInit, DoCheck {
     this.us.users$.subscribe((users) => (this.users = users));
     this.us.operationType$.subscribe((type) => (this.operationType = type));
     this.us.userToUpdate$.subscribe((user) => (this.userToUpdate = user));
-  }
-
-  ngDoCheck(): void {
-    if (this.operationType === 'update') {
-      this.userForm.setValue({
-        username: this.userToUpdate.username,
-        password: this.userToUpdate.password,
-        passwordConfirm: this.userToUpdate.passwordConfirm,
-        email: this.userToUpdate.email,
-        subscribe: this.userToUpdate.subscribe,
-        country: this.userToUpdate.country,
-        city: this.userToUpdate.city,
-      });
-      this.us.setOperationType('editing');
-    }
   }
 
   inputIsValid(field: string): any {
