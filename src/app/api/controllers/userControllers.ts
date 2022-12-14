@@ -29,7 +29,7 @@ export const createUser = async (req: any, res: any) => {
 
     res.status(200).json(user);
   } catch (err: any) {
-    res.status(err.status).json({ message: 'Something went wrong!' });
+    res.status(err.status || 500).json({ message: 'Something went wrong!' });
   }
 };
 
@@ -41,7 +41,7 @@ export const loginUser = async (req: any, res: any) => {
       },
     });
     if (!user || !bcrypt.compareSync(req.body.password, user?.password))
-      res.status(404).json({
+      res.status(403).json({
         satus: 'error',
         message: 'Invalid credentials',
       });
@@ -52,6 +52,6 @@ export const loginUser = async (req: any, res: any) => {
         .json({ name: user?.name, email: user?.email, secret: user?.secret });
     }
   } catch (err: any) {
-    res.status(err.status).json({ message: 'Something went wrong!' });
+    res.status(err.status || 500).json({ message: 'Something went wrong!' });
   }
 };
