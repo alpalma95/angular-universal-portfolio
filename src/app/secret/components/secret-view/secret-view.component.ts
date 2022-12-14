@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-secret-view',
   templateUrl: './secret-view.component.html',
-  styleUrls: ['./secret-view.component.scss']
+  encapsulation: ViewEncapsulation.ShadowDom,
+  styleUrls: ['./secret-view.component.scss'],
 })
 export class SecretViewComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

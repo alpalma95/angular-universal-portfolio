@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { routeTransitionAnimations } from './shared/router-animations/animations';
 
@@ -6,6 +6,7 @@ import { routeTransitionAnimations } from './shared/router-animations/animations
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  // encapsulation: ViewEncapsulation.ShadowDom,
   animations: [routeTransitionAnimations],
 })
 export class AppComponent implements OnInit {

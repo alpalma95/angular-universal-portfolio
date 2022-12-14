@@ -5,7 +5,7 @@ import { tap } from 'rxjs';
 @Component({
   selector: 'app-secret',
   templateUrl: './secret.component.html',
-  styleUrls: ['./secret.component.scss', '../../../styles/skeleton.scss'],
+  styleUrls: ['./secret.component.scss'],
 })
 export class SecretComponent implements OnInit {
   userSecret: string = '';
