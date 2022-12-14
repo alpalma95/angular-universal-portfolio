@@ -1,4 +1,4 @@
-<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="userForm" (ngSubmit)="createOrUpdateUser()">
   <label for="user-name">Username</label>
   <input type="text" id="user-name" formControlName="username" />
   <span *ngIf="inputIsValid('username')" class="error"
@@ -41,6 +41,6 @@
   >
   <br />
   <button type="submit">
-    {{ operationType === "editing" ? "UPDATE" : operationType }}
+    {{ operationType | uppercase }}
   </button>
 </form>

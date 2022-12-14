@@ -18,6 +18,7 @@ export class TableComponent implements OnInit {
 
   setUpdateUser(user: User): void {
     this.us.setUpdateUser(user);
+    this.us.setOperationType('update');
   }
 
   deleteUser(user: User): void {
