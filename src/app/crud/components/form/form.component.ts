@@ -14,7 +14,7 @@ import { PasswordMatch } from '../../validators/password.validator';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss', '../../../styles/skeleton.scss'],
+  styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit, DoCheck {
   countryOptions: string[] = ['Ireland', 'Australia', 'Spain', 'Guatemala'];
